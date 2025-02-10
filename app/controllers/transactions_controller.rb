@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:edit, :update, :destroy]
 
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.includes(:category).all
   end
 
   def create
