@@ -1,5 +1,9 @@
 class TransactionsController < ApplicationController
-  before_action :set_transaction, only: [:show, :edit, :update, :destroy]
+  before_action :set_transaction, only: [:edit, :update, :destroy]
+
+  def index
+    @transactions = Transaction.all
+  end
 
   def create
     @transaction = Transaction.new(transaction_params)
