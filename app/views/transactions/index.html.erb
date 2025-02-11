@@ -1,8 +1,6 @@
 <div class="w-full max-w-4xl bg-white bg-opacity-90 rounded-lg shadow-lg p-8">
   <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Transactions</h1>
 
-  <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-6 inline-block" %>
-
   <div class="overflow-x-auto">
     <table class="min-w-full bg-white border border-gray-200 rounded-lg">
       <thead class="bg-gray-50">
@@ -44,6 +42,8 @@
       </tbody>
     </table>
   </div>
+
+  <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-16 justify-center inline-block" %>
 
   <div class="mt-8">
     <%= line_chart Transaction.group_by_day(:date).sum(:amount), class: "w-full" %>

@@ -8,4 +8,6 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
