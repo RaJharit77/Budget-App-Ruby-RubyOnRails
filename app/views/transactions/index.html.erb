@@ -43,7 +43,9 @@
     </table>
   </div>
 
-  <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-16 justify-center inline-block" %>
+  <div class="flex justify-center mt-8">
+    <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block" %>
+  </div>
 
   <div class="mt-8">
     <%= line_chart Transaction.group_by_day(:date).sum(:amount), class: "w-full" %>

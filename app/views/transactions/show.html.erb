@@ -1,0 +1,30 @@
+<div class="w-full max-w-4xl bg-white bg-opacity-90 rounded-lg shadow-lg p-8 mx-auto mt-8">
+  <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Transaction Details</h1>
+
+  <div class="space-y-4">
+    <div>
+      <strong>Amount:</strong>
+      <%= @transaction.amount %>
+    </div>
+
+    <div>
+      <strong>Date:</strong>
+      <%= @transaction.date %>
+    </div>
+
+    <div>
+      <strong>Description:</strong>
+      <%= @transaction.description %>
+    </div>
+
+    <div>
+      <strong>Category:</strong>
+      <%= @transaction.category&.name || 'No Category' %>
+    </div>
+  </div>
+
+  <div class="text-center mt-8">
+    <%= link_to 'Edit', edit_transaction_path(@transaction), class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2" %>
+    <%= link_to 'Back', transactions_path, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
+</div>
