@@ -5,10 +5,6 @@ class TransactionsController < ApplicationController
     @transactions = Transaction.includes(:category).all
   end
 
-  def show
-    # L'action show est déjà gérée par before_action :set_transaction
-  end
-
   def new
     @transaction = Transaction.new
   end

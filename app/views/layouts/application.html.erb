@@ -16,20 +16,11 @@
 
   <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
-
-  <style>
-      body {
-          background-image: url(../../public/images/budget.jpg);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-      }
-  </style>
 </head>
 
-    <body class="bg-gray-100 bg-opacity-90">
-      <main class="container mx-auto px-5 flex flex-col items-center justify-center min-h-screen">
-        <%= yield %>
-      </main>
-    </body>
+<body class="bg-gray-300 bg-opacity-90">
+<main class="container mx-auto px-5 flex flex-col items-center justify-center min-h-screen">
+  <%= yield %>
+</main>
+</body>
 </html>
