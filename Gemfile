@@ -62,8 +62,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'chartkick'
-gem 'groupdate'
-gem 'tailwindcss-rails'
+gem "chartkick"
+gem "group-date"
+gem "tailwindcss-rails"
 gem "tailwindcss-ruby", "~> 4.0"
-gem 'groupdate'
