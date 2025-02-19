@@ -48,8 +48,6 @@
   </div>
 
   <div class="mt-8">
-    <%= line_chart Transaction.group_by_day(:date).sum(:amount), class: "w-full" %>
-
     <% if Transaction.any? %>
       <%= line_chart Transaction.group_by_day(:date).sum(:amount), class: "w-full" %>
     <% else %>
