@@ -63,6 +63,6 @@ group :test do
 end
 
 gem "chartkick"
-gem "group-date"
+gem 'groupdate'
 gem "tailwindcss-rails"
 gem "tailwindcss-ruby", "~> 4.0"

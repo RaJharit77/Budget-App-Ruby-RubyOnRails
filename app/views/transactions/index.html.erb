@@ -43,15 +43,12 @@
     </table>
   </div>
 
-  <div class="flex justify-center mt-8">
-    <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block" %>
-  </div>
-
-  <div class="mt-8">
-    <% if Transaction.any? %>
-      <%= line_chart Transaction.group_by_day(:date).sum(:amount), class: "w-full" %>
-    <% else %>
-      <p class="text-center text-gray-500">No data available for the chart.</p>
-    <% end %>
+  <div class="flex flex-col items-center mt-8 space-y-4">
+    <div class="flex justify-center">
+      <%= link_to 'New Transaction', new_transaction_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg inline-block" %>
+    </div>
+    <div class="flex justify-center">
+      <%= link_to 'View Charts', charts_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg inline-block" %>
+    </div>
   </div>
 </div>

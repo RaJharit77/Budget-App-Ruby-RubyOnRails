@@ -1,0 +1,13 @@
+<div class="w-full max-w-4xl bg-gray-200 bg-opacity-90 rounded-lg shadow-lg p-8 mx-auto">
+  <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Transaction Chart</h1>
+
+  <% if @chart_data.any? %>
+    <%= line_chart @chart_data, class: "w-full" %>
+  <% else %>
+    <p class="text-center text-gray-500">No data available for the chart.</p>
+  <% end %>
+
+  <div class="text-center mt-6">
+    <%= link_to 'Back to Transactions', transactions_path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" %>
+  </div>
+</div>
